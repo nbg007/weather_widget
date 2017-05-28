@@ -5,6 +5,7 @@ To run:
 ```
 $ npm install
 $ npm start
+$ npm test
 ```
 
 
