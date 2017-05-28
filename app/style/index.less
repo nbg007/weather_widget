@@ -1,0 +1,64 @@
+.app-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+    .editor, .widget {
+        background-color: #F4F4F4;
+        border: 1px solid #CCC;
+        height: 300px;
+        float: left;
+        padding: 15px;
+    }
+
+    .editor {
+        width: 350px;
+        margin-right: 20px;
+
+        .unit, .wind  {
+            margin-top: 30px;
+        }
+
+        input[type=radio] {
+            margin-right: 5px;
+        }
+
+        #F, #off {
+            margin-left: 50px;
+        }
+    }
+
+    .widget {
+        width: 400px;
+
+        .clearfix {
+            margin-top: 20px;
+        }
+
+        .svg {
+            float: left;
+            width: 40%;
+            height: 150px;
+            background: url('../../img/weather.png') no-repeat center center;
+            background-size: 100%;
+        }
+
+        .details {
+            float: left;
+            width: 60%;
+            padding-left: 20px;
+            padding-top: 15px;
+
+            .temperature {
+                font-size: 48px;
+                font-weight: 700;
+            }
+
+            .wind {
+                color: gray;
+                margin-right: 10px;
+            }
+        }
+    }
+}

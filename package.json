@@ -10,10 +10,10 @@
     "lint": "eslint *"
   },
   "dependencies": {
-    "antd": "^2.8.3",
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
     "jsx": "^0.9.89",
+    "prop-types": "^15.5.10",
     "ramda": "^0.23.0",
     "react": "^15.3.2",
     "react-bootstrap": "^0.30.8",
