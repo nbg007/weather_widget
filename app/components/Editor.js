@@ -5,8 +5,10 @@ import '../style/index.less';
 class Editor extends Component {
     static propTypes = {
         unit: PropTypes.string,
-        showWind: PropTypes.string,
-        changeTitle: PropTypes.func
+        wind: PropTypes.string,
+        changeTitle: PropTypes.func,
+        toggleWeatherUnit: PropTypes.func,
+        toggleShowWind: PropTypes.func
     }
 
     constructor(props) {

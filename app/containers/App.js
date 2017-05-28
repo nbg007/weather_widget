@@ -34,8 +34,6 @@ class App extends Component {
             toggleShowWind, toggleWeatherUnit, changeTitle
         } = this.props;
 
-        console.log('city:', city)
-
         return (
             <div className="app-container">
                 {isFetching && <h1>Loading...</h1>}

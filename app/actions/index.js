@@ -50,9 +50,8 @@ export const fetchData = () => (dispatch) => {
             const { latitude, longitude } = position.coords;
             let response = await fetch(`http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&APPID=dbf86c23a191add4cfbf7d8b44397f19`);
             let json = await response.json();
-            console.log('json:', json)
             let direction = getWindDirection(json.wind.deg);
-            //wind speed unit changes from m/s to kn/h, it needs multiply 3.6
+            //wind speed unit changes from m/s to km/h, it needs multiply 3.6
             dispatch(receiveData(json.name, json.main.temp, direction, json.wind.speed*3.6));
         });
     } catch (e) {
