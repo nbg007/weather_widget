@@ -20,10 +20,6 @@ class App extends Component {
         changeTitle: PropTypes.func
     }
 
-    constructor(props) {
-        super(props);
-    }
-
     componentDidMount() {
         this.props.fetchData();
     }
@@ -61,20 +57,15 @@ class App extends Component {
     }
 }
 
-const mapStateToProps = (state) => {
-    const { 
-        title, temperature, direction,
-        speed, city, isFetching, wind
-    } = state;
+const mapStateToProps = ({
+    title, temperature, direction,
+    speed, city, isFetching, wind
+}) => ({
+    title, temperature, direction,
+    speed, city, isFetching, wind
+})
 
-    return {
-        title, temperature, direction,
-        speed, city, isFetching, wind
-    };
-}
+const mapDispatchToProps = dispatch => bindActionCreators(actionCreators, dispatch)
 
-const mapDispatchToProps = dispatch => {
-    return bindActionCreators(actionCreators, dispatch)
-}
 
 export default connect(mapStateToProps, mapDispatchToProps)(App)
