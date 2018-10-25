@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import '../style/index.less';
 
@@ -48,12 +48,11 @@ class Editor extends Component {
     }
 
     render() {
-
         const { wind } = this.props;
         const { unit } = this.state;
 
         return (
-            <div>
+            <Fragment>
                 <h4>Title</h4>
                 <input type="text" className="form-control" onChange={ ::this.handleInput } />
 
@@ -72,7 +71,7 @@ class Editor extends Component {
                 <input type="radio" id="off" name="wind" checked={ wind === 'Off' } 
                         value="Off" onChange={ ::this.handleShowWind }/>
                 <label htmlFor="off">Off</label>
-            </div>
+            </Fragment>
         )
     }
 }
