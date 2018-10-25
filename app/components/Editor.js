@@ -11,11 +11,8 @@ class Editor extends Component {
         toggleShowWind: PropTypes.func
     }
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            unit: 'Celsius'
-        }
+    state = {
+        unit: 'Celsius'
     }
 
     handleInput(e) {
