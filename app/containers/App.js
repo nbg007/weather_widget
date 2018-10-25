@@ -7,7 +7,7 @@ import * as ActionTypes from '../constant';
 import * as actionCreators from '../actions/index';
 
 import Editor from '../components/Editor';
-import Widget from '../components/widget';
+import Widget from '../components/Widget';
 
 class App extends Component {
     static propTypes = {
