@@ -48,9 +48,11 @@ export const fetchData = () => (dispatch) => {
         dispatch(requestData())
         navigator.geolocation.getCurrentPosition(async (position) => {
             const { latitude, longitude } = position.coords;
-            let response = await fetch(`http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&APPID=dbf86c23a191add4cfbf7d8b44397f19`);
-            let json = await response.json();
-            let direction = getWindDirection(json.wind.deg);
+            const appid = 'dbf86c23a191add4cfbf7d8b44397f19';
+            const response = await fetch(`http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&APPID=${appid}`);
+            if (!response.ok) throw new Error('Response failed');
+            const json = await response.json();
+            const direction = getWindDirection(json.wind.deg);
             //wind speed unit changes from m/s to km/h, it needs multiply 3.6
             dispatch(receiveData(json.name, json.main.temp, direction, json.wind.speed*3.6));
         });
