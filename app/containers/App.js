@@ -25,10 +25,8 @@ class App extends Component {
     }
 
     render() {
-        const { 
-            isFetching, city, temperature, title, wind, direction, speed, 
-            toggleShowWind, toggleWeatherUnit, changeTitle
-        } = this.props;
+        const { isFetching, city, temperature, title, wind, direction, speed, 
+                toggleShowWind, toggleWeatherUnit, changeTitle } = this.props;
 
         return (
             <div className="app-container">
